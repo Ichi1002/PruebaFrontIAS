@@ -16,13 +16,14 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import {MatTableModule} from '@angular/material/table';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
     AppComponent,
     DeliveryComponentsComponent,
     DisplayComponent,
-    DeliveryDateComponent
+    DeliveryDateComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +40,9 @@ import {MatTableModule} from '@angular/material/table';
     MatSelectModule,
     MatInputModule,
     ReactiveFormsModule,
-    MatTableModule
+    MatTableModule,
+    MatDialogModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
