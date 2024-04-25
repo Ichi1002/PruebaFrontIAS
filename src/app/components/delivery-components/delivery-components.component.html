@@ -1,0 +1,21 @@
+<form [formGroup]="deliveryForm" (ngSubmit)="guardar()">
+  <mat-form-field>
+    <mat-label>Departamento</mat-label>
+    <mat-select name="department" formControlName="department">
+      <mat-option *ngFor="let department of departmentList" (click)="findCity(department.id)"
+        [value]="department.name">{{department.name}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Ciudad</mat-label>
+    <mat-select name="city" formControlName="city">
+      <mat-option *ngFor="let city of cityList" [value]="city.name">{{city.name}} </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Dirección</mat-label>
+    <input matInput formControlName="direction">
+  </mat-form-field>
+  <button mat-flat-button type="submit">Guardar</button>
+</form>
